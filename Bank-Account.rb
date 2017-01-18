@@ -1,20 +1,20 @@
 class BankAccount
-  attr_reader :balance
-  attr_writer :interest_rate
-  attr_accessor "balance", "interest_rate"
+  attr_accessor :balance, :interest_rate, :amount
 
-  def initialize
+  def initialize (balance, interest_rate)
     @balance = balance
     @interest_rate = interest_rate
   end
-end
 
-account = BankAccount.new
-
-class Deposit
   def deposit(amount)
-    @deposit = amount + :balance
+    @balance += amount
+  end
+
+  def withdraw(amount)
+    @balance -= amount
+  end
+
+  def gain_interest
+    @balance = (@balance * @interest_rate) + @balance
   end
 end
-
-deposit = Deposit.new
