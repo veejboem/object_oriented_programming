@@ -15,7 +15,7 @@ class Cat
     end
 
   def meow
-    puts "My name is #{@name} and I eat #{@preferred_food} at #{@eats_at}."
+    puts "My name is #{@name} and I eat #{@preferred_food} at #{eats_at}."
     end
   end
 end
